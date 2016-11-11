@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div ng-controller="MainController">
+            <div class="col-sm-4" >
+                <h2 >Responsive Search</h2>
+                <input class="form-control col-sm-2" type="text" ng-model="filterCriteria" placeholer="filter"/>
+            </div>
+        <div class="blankspace"></div>
+
+            <div ng-repeat="person in peopleList | filter : filterCriteria">
+                <div class="col-sm-2 person">{{ person }}
+                </div>
+            </div>
+        </div>
+    </div>
+<!--<script type="text/javascript" src="../bundle.js" charset="utf-8"></script>-->
+<script type="text/javascript" src="bundle.js"></script></body>
+<!--<script src="./app.js">-->
+
+
+</html>
